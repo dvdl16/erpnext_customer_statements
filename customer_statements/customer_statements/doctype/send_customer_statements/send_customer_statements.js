@@ -6,3 +6,15 @@ frappe.ui.form.on('Send Customer Statements', {
 
 	}
 });
+
+
+frappe.ui.form.on("Send Customer Statements", "send_customer_statements", function(frm) {
+	frappe.call({
+		method: "customer_statements.api.send_statements",
+		args: {
+		},
+		callback: function(r) {
+
+		}
+	});
+});
