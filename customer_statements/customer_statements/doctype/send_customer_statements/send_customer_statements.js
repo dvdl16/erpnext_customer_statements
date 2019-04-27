@@ -5,7 +5,7 @@
 frappe.ui.form.on("Send Customer Statements", "send_customer_statements", function(frm) {
 	cur_frm.save();
 	frappe.call({
-		method: "customer_statements.api.send_statements2",
+		method: "customer_statements.api.send_statements",
 		args: {
 		},
 		callback: function(r) {

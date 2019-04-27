@@ -8,13 +8,7 @@ import json
 
 
 @frappe.whitelist()
-def send_statements2():
-
-	#attachments = None
-	#if self.format == "HTML":
-#		message = data
-#	else:s
-#		message = self.get_html_table()
+def send_statements():
 
 	email_list = frappe.db.get_values('Send Customer Statements Customers', {'parent': 'Send Customer Statements'}, ['customer_name','email','send_statement'])
 	for customer_name, email, send_statement in email_list:
