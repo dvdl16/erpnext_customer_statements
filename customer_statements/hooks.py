@@ -120,3 +120,6 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "customer_statements.event.get_events"
 # }
 
+fixtures = [
+    {"dt":"Custom Field", "filters": [["dt", "in", ("Customer")]]}
+]
